@@ -52,11 +52,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='products'>
+      <section
+        id='products'
+        className='h-screen flex justify-center items-center text-5xl text-red-700 font-serif'
+      >
         <h1>Produtos</h1>
       </section>
-      <section id='where'>onde achar</section>
-      <section id='news'>Notícias</section>
+      <section
+        id='where'
+        className='h-screen flex justify-center items-center text-5xl text-red-700 font-serif'
+      >
+        <h1>Onde Achar</h1>
+      </section>
+      <section
+        id='news'
+        className='h-screen flex justify-center items-center text-5xl text-red-700 font-serif'
+      >
+        <h1>Notícias</h1>
+      </section>
+      <footer className='h-32 border-t border-gray-400 border-dashed flex justify-center items-center text-3xl'>
+        <h1>Rodapé</h1>
+      </footer>
     </div>
   )
 }
