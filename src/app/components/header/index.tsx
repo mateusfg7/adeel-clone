@@ -25,11 +25,11 @@ export function Header() {
   }
 
   return (
-    <header className='flex justify-between px-16 text-white bg-gradient-to-b from-black/50'>
-      <div className='py-3'>
+    <header className='flex justify-between px-16 text-white bg-gradient-to-b from-black'>
+      <div className='py-6'>
         <Image src={adeelLogo} alt='Adeel Alimentos' />
       </div>
-      <div className='flex flex-col items-end gap-5'>
+      <div className='flex flex-col items-end gap-8'>
         <div className='flex items-start justify-center gap-6 px-12 py-3 text-red-700 bg-yellow-400 border-b-2 border-red-700 rounded-b-full border-x-2'>
           <div className='flex flex-col items-center'>
             <span className='text-sm'>BELO HORIZONTE</span>

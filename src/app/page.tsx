@@ -1,13 +1,17 @@
 'use client'
 
-import Image from 'next/image'
-
 import { Header } from './components/header'
+import { Carousel } from './components/carousel'
 
 export default function Home() {
   return (
     <div>
-      <Header />
+      <section>
+        <div className='z-50 w-full absolute'>
+          <Header />
+        </div>
+        <Carousel />
+      </section>
     </div>
   )
 }
