@@ -6,6 +6,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: 'var(--font-roboto)',
+        serif: 'var(--font-noto-serif-telugu)',
       },
     },
   },

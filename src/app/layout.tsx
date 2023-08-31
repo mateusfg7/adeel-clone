@@ -1,12 +1,18 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Roboto, Noto_Serif_Telugu } from 'next/font/google'
 
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['400', '700', '900'],
   display: 'swap',
   variable: '--font-roboto',
+})
+
+const notoSerifTelugu = Noto_Serif_Telugu({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-noto-serif-telugu',
 })
 
 export const metadata: Metadata = {
@@ -21,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pt-br'>
-      <body className={roboto.variable}>{children}</body>
+      <body className={`${roboto.variable} ${notoSerifTelugu.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }
