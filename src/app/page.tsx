@@ -44,7 +44,7 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <button className='bg-yellow-400 rounded p-3 text-red-700 transition-colors duration-500 font-bold hover:bg-red-700 hover:text-yellow-400 leading-none'>
+                <button className='bg-yellow-400 rounded py-3 px-5 text-red-700 transition-colors duration-500 font-bold hover:bg-red-700 hover:text-yellow-400 leading-none'>
                   SAIBA MAIS
                 </button>
               </div>
