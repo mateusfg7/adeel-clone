@@ -1,22 +1,16 @@
-'use client'
-
-import Link from 'next/link'
-import { useState } from 'react'
-
-import adeelLogo from './logo.png'
+import Link, { LinkProps } from 'next/link'
 import Image from 'next/image'
 
-export function Header() {
-  const [selectedMenuItem, setSelectedMenuItem] = useState('HOME')
+import adeelLogo from './logo.png'
 
-  const MenuItem = ({ title }: { title: string }) => {
+export function Header() {
+  const MenuItem = ({ title, ...props }: { title: string } & LinkProps) => {
     return (
       <li>
         <Link
-          href='/about'
-          onClick={() => setSelectedMenuItem(title)}
-          data-is-selected={selectedMenuItem === title}
-          className='block py-2 border-b-2 transition-colors duration-500 border-transparent hover:border-red-600 data-[is-selected="true"]:font-bold data-[is-selected="true"]:text-yellow-400 data-[is-selected="true"]:border-yellow-400'
+          {...props}
+          data-is-home={title === 'HOME'}
+          className='block py-2 border-b-2 transition-colors duration-500 border-transparent hover:border-red-600 data-[is-home="true"]:font-bold data-[is-home="true"]:text-yellow-400 data-[is-home="true"]:border-yellow-400'
         >
           {title}
         </Link>
@@ -52,11 +46,11 @@ export function Header() {
         </div>
         <nav>
           <ul className='flex gap-5 text-lg'>
-            <MenuItem title='HOME' />
-            <MenuItem title='SOBRE A ADEEL' />
-            <MenuItem title='PRODUTOS' />
-            <MenuItem title='ONDE ENCONTRAR' />
-            <MenuItem title='NOTÍCIAS' />
+            <MenuItem href='#home' title='HOME' />
+            <MenuItem href='#about' title='SOBRE A ADEEL' />
+            <MenuItem href='#products' title='PRODUTOS' />
+            <MenuItem href='#where' title='ONDE ENCONTRAR' />
+            <MenuItem href='#news' title='NOTÍCIAS' />
           </ul>
         </nav>
       </div>
